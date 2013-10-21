@@ -1,0 +1,8 @@
+
+  <% @airports.each do |airport_code| %>
+    <% airport = Airport.new %>
+    <% airport.code = airport_code[:code] %>
+
+    <h2><%= airport.code %> <a href="/city?id=<%= airport_code[:id] %>">&raquo;</a></h2>
+
+  <% end %>
